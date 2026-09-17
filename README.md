@@ -69,11 +69,7 @@ ShopNova/
 
 ## 🌐 Live Demo
 
-**Coming soon...**
-
-Or, if you already deployed it:
-
-👉 **[View ShopNova Live](YOUR-LINK-HERE)**
+👉 **[View ShopNova Live](https://shopnova-beryl.vercel.app/)**
 
 ## 👨‍💻 Built By
 
