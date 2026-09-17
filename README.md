@@ -40,8 +40,6 @@ Just the good old web. 🗿
 
 ## 📸 Preview
 
-> Add your project screenshot or live demo here.
-
 ## 🚀 What I Practiced
 
 This project helped me practice:
