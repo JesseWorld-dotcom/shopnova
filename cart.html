@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="ShopNova - A modern demo shopping experience."
+  >
+
+  <title>ShopNova — Modern Shopping</title>
+
+  <!-- Inline SVG favicon -->
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%236366f1'/%3E%3Cpath d='M27 32h9l5 38h31l8-27H40' fill='none' stroke='white' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='46' cy='82' r='5' fill='white'/%3E%3Ccircle cx='70' cy='82' r='5' fill='white'/%3E%3C/svg%3E"
+  >
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="./cart.css">
+</head>
+
+<body>
+
+  <!-- =======================================================
+       HEADER
+       ======================================================= -->
+
+  <header class="header">
+    <div class="container nav">
+
+      <a href="#home" class="brand">
+        <span class="brand-icon">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </span>
+
+        Shop<span>Nova</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+
+          <li>
+            <a
+              href="#home"
+              class="nav-link active"
+            >
+              <i class="fa-solid fa-house"></i>
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#products"
+              class="nav-link"
+            >
+              <i class="fa-solid fa-store"></i>
+              Products
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#about"
+              class="nav-link"
+            >
+              <i class="fa-solid fa-circle-info"></i>
+              About
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#cart"
+              class="nav-link"
+            >
+              <i class="fa-solid fa-cart-shopping"></i>
+              Cart
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#contact"
+              class="nav-link"
+            >
+              <i class="fa-solid fa-envelope"></i>
+              Contact
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+
+        <button
+          class="icon-btn profile-trigger"
+          id="profileBtn"
+          title="Profile"
+        >
+          <i class="fa-regular fa-user"></i>
+        </button>
+
+        <a
+          href="#cart"
+          class="icon-btn cart-button"
+          title="Shopping cart"
+        >
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span
+            class="cart-count"
+            id="cartCount"
+          >0</span>
+        </a>
+
+        <button
+          class="icon-btn mobile-menu-btn"
+          id="mobileMenuBtn"
+          title="Menu"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section
+      class="hero"
+      id="home"
+    >
+      <div class="container hero-grid">
+
+        <div>
+          <span class="eyebrow">
+            <i class="fa-solid fa-sparkles"></i>
+            Modern shopping, made simple
+          </span>
+
+          <h1>
+            Find what you
+            <span>love.</span>
+          </h1>
+
+          <p class="hero-text">
+            Welcome to ShopNova — your modern demo
+            shopping space for discovering useful,
+            stylish and everyday products.
+          </p>
+
+          <div class="hero-actions">
+
+            <a
+              href="#products"
+              class="btn btn-primary"
+            >
+              <i class="fa-solid fa-bag-shopping"></i>
+              Shop Products
+            </a>
+
+            <a
+              href="#about"
+              class="btn btn-secondary"
+            >
+              Learn More
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="hero-visual">
+
+          <div class="hero-card">
+
+            <img
+              class="hero-image"
+              src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=85"
+              alt="Modern headphones and technology"
+            >
+
+          </div>
+
+          <div class="floating-card float-one">
+            <i class="fa-solid fa-truck-fast"></i>
+
+            <div>
+              <strong>Fast delivery</strong>
+              <br>
+              <span style="color:var(--text-soft);">
+                Demo shopping experience
+              </span>
+            </div>
+          </div>
+
+          <div class="floating-card float-two">
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <div>
+              <strong>Easy checkout</strong>
+              <br>
+              <span style="color:var(--text-soft);">
+                Simple & secure demo
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         WALLET
+         ===================================================== -->
+
+    <section class="wallet-section">
+      <div class="container">
+
+        <div class="wallet-card">
+
+          <div class="wallet-top">
+
+            <div>
+              <div class="wallet-label">
+                SHOPNOVA DEMO WALLET
+              </div>
+
+              <div
+                class="wallet-balance"
+                id="walletBalance"
+              >
+                ₦0
+              </div>
+            </div>
+
+            <button
+              class="btn wallet-button"
+              id="addMoneyBtn"
+            >
+              <i class="fa-solid fa-plus"></i>
+              Add Money
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         PRODUCTS
+         ===================================================== -->
+
+    <section
+      class="section"
+      id="products"
+    >
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+            <h2>Explore Products</h2>
+
+            <p>
+              Browse our demo collection and add
+              anything you like to your cart.
+            </p>
+          </div>
+
+          <span
+            id="productResultCount"
+            style="
+              color:var(--text-soft);
+              font-size:.82rem;
+              font-weight:700;
+            "
+          >
+            12 products
+          </span>
+
+        </div>
+
+
+        <div class="toolbar">
+
+          <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+              type="search"
+              id="searchInput"
+              placeholder="Search products..."
+              autocomplete="off"
+            >
+
+          </div>
+
+
+          <select
+            id="categoryFilter"
+            aria-label="Filter products by category"
+          >
+            <option value="all">
+              All Categories
+            </option>
+
+            <option value="Electronics">
+              Electronics
+            </option>
+
+            <option value="Fashion">
+              Fashion
+            </option>
+
+            <option value="Home">
+              Home
+            </option>
+
+            <option value="Accessories">
+              Accessories
+            </option>
+          </select>
+
+
+          <select
+            class="sort-select"
+            id="sortSelect"
+            aria-label="Sort products"
+          >
+            <option value="default">
+              Sort: Featured
+            </option>
+
+            <option value="low">
+              Price: Low to High
+            </option>
+
+            <option value="high">
+              Price: High to Low
+            </option>
+
+            <option value="name">
+              Name: A to Z
+            </option>
+          </select>
+
+        </div>
+
+
+        <div
+          class="product-grid"
+          id="productGrid"
+        ></div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         ABOUT
+         ===================================================== -->
+
+    <section
+      class="section"
+      id="about"
+    >
+      <div class="container about-grid">
+
+        <div>
+
+          <img
+            class="about-image"
+            src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1000&q=85"
+            alt="Modern backpack"
+          >
+
+        </div>
+
+        <div class="about-content">
+
+          <span class="eyebrow">
+            <i class="fa-solid fa-star"></i>
+            About ShopNova
+          </span>
+
+          <h2>
+            Shopping should feel
+            simple.
+          </h2>
+
+          <p>
+            ShopNova is a modern shopping-cart
+            project designed to demonstrate how
+            a complete online shopping interface
+            can work using HTML, CSS and JavaScript.
+          </p>
+
+          <div class="feature-list">
+
+            <div class="feature-item">
+              <i class="fa-solid fa-check"></i>
+              <span>
+                Modern responsive shopping interface
+              </span>
+            </div>
+
+            <div class="feature-item">
+              <i class="fa-solid fa-check"></i>
+              <span>
+                Search, filter and sort products
+              </span>
+            </div>
+
+            <div class="feature-item">
+              <i class="fa-solid fa-check"></i>
+              <span>
+                Persistent cart and wallet demo
+              </span>
+            </div>
+
+            <div class="feature-item">
+              <i class="fa-solid fa-check"></i>
+              <span>
+                Mobile-friendly design
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         PROFILE
+         ===================================================== -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <h2>Your ShopNova Profile</h2>
+            <p>
+              A simple demo account area for
+              your shopping experience.
+            </p>
+          </div>
+        </div>
+
+        <div class="profile-grid">
+
+          <div class="profile-card">
+
+            <div class="profile-head">
+
+              <div
+                class="avatar"
+                id="profileAvatar"
+              >
+                OE
+              </div>
+
+              <div>
+                <div
+                  class="profile-name"
+                  id="profileName"
+                >
+                  Ogie
+                </div>
+
+                <div
+                  class="profile-email"
+                  id="profileEmail"
+                >
+                  ogie.shopnova@gmail.com
+                </div>
+              </div>
+
+            </div>
+
+
+            <div class="profile-info">
+
+              <div class="profile-info-row">
+                <span>
+                  <i class="fa-regular fa-user"></i>
+                  Account
+                </span>
+
+                <strong>
+                  Demo Account
+                </strong>
+              </div>
+
+              <div class="profile-info-row">
+                <span>
+                  <i class="fa-solid fa-wallet"></i>
+                  Wallet
+                </span>
+
+                <strong id="profileWallet">
+                  ₦0
+                </strong>
+              </div>
+
+              <div class="profile-info-row">
+                <span>
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  Orders
+                </span>
+
+                <strong id="profileOrders">
+                  0
+                </strong>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="stats-card">
+
+            <div class="stats-grid">
+
+              <div class="stat">
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <div
+                  class="stat-value"
+                  id="statCart"
+                >
+                  0
+                </div>
+
+                <div class="stat-label">
+                  Cart Items
+                </div>
+              </div>
+
+              <div class="stat">
+                <i class="fa-regular fa-heart"></i>
+
+                <div
+                  class="stat-value"
+                  id="statFavorites"
+                >
+                  0
+                </div>
+
+                <div class="stat-label">
+                  Favorites
+                </div>
+              </div>
+
+              <div class="stat">
+                <i class="fa-solid fa-receipt"></i>
+
+                <div
+                  class="stat-value"
+                  id="statOrders"
+                >
+                  0
+                </div>
+
+                <div class="stat-label">
+                  Orders
+                </div>
+              </div>
+
+              <div class="stat">
+                <i class="fa-solid fa-wallet"></i>
+
+                <div
+                  class="stat-value"
+                  id="statBalance"
+                >
+                  ₦0
+                </div>
+
+                <div class="stat-label">
+                  Balance
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         CART
+         ===================================================== -->
+
+    <section
+      class="section"
+      id="cart"
+    >
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+            <h2>Your Cart</h2>
+
+            <p>
+              Review your products before
+              completing the demo checkout.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="cart-layout">
+
+          <div
+            class="cart-list"
+            id="cartList"
+          ></div>
+
+
+          <aside class="cart-summary">
+
+            <h3>
+              Order Summary
+            </h3>
+
+            <div class="summary-row">
+              <span>Subtotal</span>
+
+              <strong id="cartSubtotal">
+                ₦0
+              </strong>
+            </div>
+
+            <div class="summary-row">
+              <span>Delivery</span>
+
+              <strong id="cartDelivery">
+                ₦0
+              </strong>
+            </div>
+
+            <div class="summary-row">
+              <span>Discount</span>
+
+              <strong id="cartDiscount">
+                ₦0
+              </strong>
+            </div>
+
+            <div class="summary-row total">
+              <span>Total</span>
+
+              <strong id="cartTotal">
+                ₦0
+              </strong>
+            </div>
+
+            <button
+              class="btn btn-primary checkout-btn"
+              id="checkoutBtn"
+            >
+              <i class="fa-solid fa-credit-card"></i>
+              Demo Checkout
+            </button>
+
+            <button
+              class="clear-cart-btn"
+              id="clearCartBtn"
+            >
+              <i class="fa-regular fa-trash-can"></i>
+              Clear Cart
+            </button>
+
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT
+         ===================================================== -->
+
+    <section
+      class="section"
+      id="contact"
+    >
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+            <h2>Contact ShopNova</h2>
+
+            <p>
+              Have a question? Send us a message.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+          <div class="contact-card">
+
+            <h3>
+              Let's talk.
+            </h3>
+
+            <p>
+              This contact section is connected
+              to a demo FormSubmit endpoint.
+            </p>
+
+
+            <div class="contact-details">
+
+              <div class="contact-detail">
+                <i class="fa-solid fa-envelope"></i>
+                <span>
+                  ogieanawe@gmail.com
+                </span>
+              </div>
+
+              <div class="contact-detail">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>
+                  ShopNova Online
+                </span>
+              </div>
+
+              <div class="contact-detail">
+                <i class="fa-solid fa-clock"></i>
+                <span>
+                  Available anytime
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="contact-card">
+
+            <form
+              id="contactForm"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+            >
+
+              <input
+                type="hidden"
+                name="access_key"
+                value="279d8232-3a96-4372-9b56-f80fd282847c"
+              >
+
+              <div class="form-grid">
+
+                <div class="form-group">
+
+                  <label for="contactName">
+                    Name
+                  </label>
+
+                  <input
+                    class="form-control"
+                    id="contactName"
+                    name="name"
+                    type="text"
+                    placeholder="Your name"
+                    required
+                  >
+
+                </div>
+
+
+                <div class="form-group">
+
+                  <label for="contactEmail">
+                    Email
+                  </label>
+
+                  <input
+                    class="form-control"
+                    id="contactEmail"
+                    name="email"
+                    type="email"
+                    placeholder="you@shopnova.com"
+                    required
+                  >
+
+                </div>
+
+
+                <div class="form-group full">
+
+                  <label for="contactMessage">
+                    Message
+                  </label>
+
+                  <textarea
+                    class="form-control"
+                    id="contactMessage"
+                    name="message"
+                    placeholder="Write your message..."
+                    required
+                  ></textarea>
+
+                </div>
+
+
+                <div class="form-group full">
+
+                  <button
+                    class="btn btn-primary"
+                    type="submit"
+                  >
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Send Message
+                  </button>
+
+                </div>
+
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =======================================================
+       FOOTER
+       ======================================================= -->
+
+  <footer class="footer">
+
+    <div class="container footer-inner">
+
+      <div class="footer-text">
+        © <span id="currentYear"></span>
+        ShopNova. Demo shopping project.
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#cart">Cart</a>
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =======================================================
+       TOAST CONTAINER
+       ======================================================= -->
+
+  <div
+    class="toast-container"
+    id="toastContainer"
+  ></div>
+
+
+  <!-- =======================================================
+       ADD MONEY MODAL
+       ======================================================= -->
+
+  <div
+    class="modal"
+    id="moneyModal"
+  >
+
+    <div class="modal-card">
+
+      <div class="modal-header">
+
+        <h3>
+          Add Money
+        </h3>
+
+        <button
+          class="modal-close"
+          data-close-modal="moneyModal"
+          title="Close"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="moneyAmount">
+          Amount
+        </label>
+
+        <input
+          class="form-control"
+          id="moneyAmount"
+          type="number"
+          min="100"
+          step="100"
+          placeholder="Enter amount"
+        >
+
+      </div>
+
+
+      <div class="amount-options">
+
+        <button
+          class="amount-option"
+          data-amount="5000"
+        >
+          ₦5,000
+        </button>
+
+        <button
+          class="amount-option"
+          data-amount="10000"
+        >
+          ₦10,000
+        </button>
+
+        <button
+          class="amount-option"
+          data-amount="25000"
+        >
+          ₦25,000
+        </button>
+
+        <button
+          class="amount-option"
+          data-amount="50000"
+        >
+          ₦50,000
+        </button>
+
+        <button
+          class="amount-option"
+          data-amount="100000"
+        >
+          ₦100,000
+        </button>
+
+        <button
+          class="amount-option"
+          data-amount="250000"
+        >
+          ₦250,000
+        </button>
+
+      </div>
+
+
+      <p class="modal-note">
+        This is a demo wallet. No real payment
+        is processed and no real money is added.
+      </p>
+
+
+      <button
+        class="btn btn-primary"
+        id="confirmAddMoney"
+        style="width:100%; margin-top:18px;"
+      >
+        <i class="fa-solid fa-wallet"></i>
+        Add to Demo Balance
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- =======================================================
+       LOGIN / PROFILE MODAL
+       ======================================================= -->
+
+  <div
+    class="modal"
+    id="profileModal"
+  >
+
+    <div class="modal-card">
+
+      <div class="modal-header">
+
+        <h3>
+          ShopNova Account
+        </h3>
+
+        <button
+          class="modal-close"
+          data-close-modal="profileModal"
+          title="Close"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+      </div>
+
+
+      <div class="login-avatar">
+        <span id="modalAvatar">
+          OE
+        </span>
+      </div>
+
+
+      <div class="login-intro">
+
+        <h3>
+          Welcome to ShopNova
+        </h3>
+
+        <p>
+          This is a demo login — no real
+          authentication is being performed.
+        </p>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="demoName">
+          Name
+        </label>
+
+        <input
+          class="form-control"
+          id="demoName"
+          type="text"
+          value="Ogie"
+          placeholder="Your name"
+        >
+
+      </div>
+
+
+      <div
+        class="form-group"
+        style="margin-top:14px;"
+      >
+
+        <label for="demoEmail">
+          Email
+        </label>
+
+        <input
+          class="form-control"
+          id="demoEmail"
+          type="email"
+          value="ogie.shopnova@gmail.com"
+          placeholder="you@example.com"
+        >
+
+      </div>
+
+
+      <button
+        class="btn btn-primary"
+        id="saveProfile"
+        style="width:100%; margin-top:18px;"
+      >
+        <i class="fa-solid fa-check"></i>
+        Save Profile
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="./script.js">
+  </script>
+
+</body>
+</html>
