@@ -37,7 +37,7 @@ No Tailwind.
 No 900MB `node_modules`.
 
 Just the good old web. 🗿
-
+ 
 ## 📸 Preview
 
 ## 🚀 What I Practiced
